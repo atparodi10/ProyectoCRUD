@@ -114,93 +114,29 @@
 
 
                     <Separator />
-
-
-                    <!-- ================================================= -->
-                    <!-- BÚSQUEDA Y FILTROS -->
-                    <!-- ================================================= -->
-
-                    <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Búsqueda y filtros" />
-
-
+                    <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Búsqueda y filtros paramétricos" />
                     <GridPane hgap="15" vgap="10">
-
-                        <!-- FILA 0 -->
-
-                        <Label text="Código o nombre:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-
-                        <TextField fx:id="txtBuscar" prefWidth="220" promptText="Buscar..." GridPane.columnIndex="1" GridPane.rowIndex="0" />
-
+                        <!-- Fila 1 -->
+                        <Label text="Código/Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <TextField fx:id="txtBuscar" prefWidth="200" promptText="Buscar..." GridPane.columnIndex="1" GridPane.rowIndex="0" />
 
                         <Label text="Categoría:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                        <ComboBox fx:id="cmbFiltroCategoria" prefWidth="180" promptText="Todas" GridPane.columnIndex="3" GridPane.rowIndex="0" />
 
-                        <ComboBox fx:id="cmbFiltroCategoria" prefWidth="220" promptText="Todas" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                        <Label text="Ordenar por:" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+                        <ComboBox fx:id="cmbOrdenPrecio" prefWidth="150" GridPane.columnIndex="5" GridPane.rowIndex="0" />
 
+                        <!-- Fila 2 -->
+                        <Label text="Precio Mínimo:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtPrecioMin" prefWidth="200" promptText="0.00" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
-                        <!-- FILA 1 -->
-
-                        <Label text="Desde:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-
-                        <DatePicker fx:id="dpDesde" prefWidth="220" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-
-
-                        <Label text="Hasta:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-
-                        <DatePicker fx:id="dpHasta" prefWidth="220" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-
-
-                        <!-- FILA 2 -->
-
-                        <Label text="Precio mínimo:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-
-                        <TextField fx:id="txtPrecioMinimo" promptText="0.00" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-
-
-                        <Label text="Precio máximo:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-
-                        <TextField fx:id="txtPrecioMaximo" promptText="0.00" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-
-
-                        <!-- FILA 3 -->
-
-                        <CheckBox fx:id="chkConExistencias" text="Solo productos con existencias" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="3" />
-
-
-                        <Label text="Ordenar por:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-
-                        <ComboBox fx:id="cmbOrdenarPor" prefWidth="220" promptText="Seleccione..." GridPane.columnIndex="3" GridPane.rowIndex="3" />
-
-
-                        <columnConstraints>
-
-                            <ColumnConstraints minWidth="120" />
-                            <ColumnConstraints prefWidth="230" />
-
-                            <ColumnConstraints minWidth="120" />
-                            <ColumnConstraints prefWidth="230" />
-
-                        </columnConstraints>
-                  <rowConstraints>
-                     <RowConstraints />
-                     <RowConstraints />
-                     <RowConstraints />
-                     <RowConstraints />
-                  </rowConstraints>
-
+                        <Label text="Precio Máximo:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtPrecioMax" prefWidth="180" promptText="0.00" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                     </GridPane>
-
-
-                    <!-- BOTONES DE FILTRO -->
-
                     <HBox spacing="8">
-
                         <Button fx:id="btnBuscar" onAction="#buscarProductos" prefWidth="90" text="Buscar" />
-
                         <Button fx:id="btnLimpiarFiltros" onAction="#limpiarFiltros" prefWidth="120" text="Limpiar filtros" />
-
                     </HBox>
-
-
                     <Separator />
 
 

@@ -59,7 +59,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>ni.edu.uam.practicacrud/ni.edu.uam.practicacrud.HelloApplication</mainClass>
+                            <mainClass>ni.edu.uam.practicacrud/ni.edu.uam.practicacrud.MainApplication</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
